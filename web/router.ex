@@ -17,6 +17,8 @@ defmodule PersonX.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+
+      #added
     post "/user/register", UserController, :register
     post "/user/login", UserController, :login
     post "/user/home", UserController, :home
@@ -28,7 +30,7 @@ defmodule PersonX.Router do
     post "/user/follow/delete", FollowController, :delete
 
       ## Follower API
-    post "/user/ollower/list", FollowerController, :list
+    post "/user/follower/list", FollowerController, :list
     post "/user/follower/delete", FollowerController, :delete
 
 
